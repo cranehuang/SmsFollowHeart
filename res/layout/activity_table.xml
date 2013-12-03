@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/whole_bg"
+    tools:context=".TableActivity" >
+
+    <EditText
+        android:id="@+id/mytablename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/tablename"
+        android:textSize="100px"
+        android:textCursorDrawable="@null"
+        android:hint="点击编辑主题" />
+
+    <LinearLayout
+        android:id="@+id/lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mytablename"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+              android:textSize="50px"
+            android:text="建表时间" />
+
+        <TextView
+            android:id="@+id/settime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tablelayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lin"
+        android:shrinkColumns="3" >
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@drawable/name" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@drawable/attended" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:background="@drawable/more" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/newperson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/addpeople_selector"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:id="@+id/statistics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/newperson" />
+
+    <ListView
+        android:id="@+id/namelist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/statistics"
+        android:layout_below="@id/tablelayout1"
+        android:layout_marginTop="4dip"
+        android:dividerHeight="2dip"
+        android:transcriptMode="alwaysScroll" />
+
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="followheart.activities"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <!-- 授予读联系人ContentProvider的权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 授予发送短信的权限 -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <!-- 加入在SDCard中创建与删除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 加入在SDCard中写入数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <receiver android:name="followheart.receivers_and_services.SmsReceiver" >
+            <intent-filter android:priority="800" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="followheart.receivers_and_services.LauncherReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="followheart.receivers_and_services.SMSService" >
+            <intent-filter>
+                <action android:name="followheart.receivers_and_services.SMSService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="followheart.activities.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/NoTitleActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="followheart.fragments.MySampleFragment"
+            android:label="@string/title_activity_my_sample_fragment" >
+        </activity>
+        <activity
+            android:name="followheart.activities.SmsDetails"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="followheart.activities.ContactsActivity"
+            android:label="@string/title_activity_contacts"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="followheart.activities.ContactGroupActivity"
+            android:label="@string/title_activity_contact_group"
+            android:theme="@style/NoTitleActivity" >
+        </activity>
+        <activity android:name="followheart.activities.EmptyActivity" >
+        </activity>
+        <activity android:name="followheart.activities.AboutActivity" >
+        </activity>
+        <activity android:name="followheart.activities.UpdateActivity" >
+        </activity>
+        <activity android:name="followheart.activities.UserActivity" >
+        </activity>
+        <activity android:name="followheart.activities.BanQuanActivity" >
+        </activity>
+        <activity android:name="followheart.activities.TableActivity" >
+        </activity>
+        <activity
+            android:name="followheart.activities.FeedbackActivity"
+            android:label="@string/title_activity_feedback" >
+        </activity>
+        
+        <activity android:name="com.umeng.fb.ConversationActivity" 
+            android:theme="@style/NoTitleActivity" />
+        <activity android:name="com.umeng.fb.ContactActivity" 
+           android:theme="@style/NoTitleActivity" />
+        
+        <meta-data android:value="529d3eb156240b572f279f6c" android:name="UMENG_APPKEY"></meta-data>
+        <meta-data android:value="Channel ID" android:name="UMENG_CHANNEL"/>
+    </application>
+
+</manifest>

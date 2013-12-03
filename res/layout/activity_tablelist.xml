@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:background="@drawable/one_table"
+        >
+
+        <TextView
+            android:id="@+id/mytable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            
+            />
+
+        <Button
+            android:id="@+id/newtable_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right"
+			android:background="#00000000"
+            />
+    </FrameLayout>
+
+    <LinearLayout
+        android:paddingTop="8dip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/whole_bg"
+        android:layout_weight="1" >
+
+        <ListView
+            
+            android:dividerHeight="10px"
+            android:id="@+id/tablelist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</LinearLayout>

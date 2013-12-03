@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_bg" >
+    
+    <TextView 
+        android:id="@+id/sms_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color_deep"
+        android:textSize="25sp"
+        android:text="信息选项："
+        android:layout_margin="7dp"/>
+    
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_divider_bg"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"/>
+    
+    <Button 
+        android:id="@+id/delete_sms"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/text_color_light"
+        android:text="删除"/>
+    <Button 
+        android:id="@+id/transmit_sms"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color_light"
+        android:gravity="center"
+        android:text="转发"/>
+    <Button 
+        android:id="@+id/copy_sms"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color_light"
+        android:gravity="center"
+        android:text="复制短信"/>
+
+</LinearLayout>

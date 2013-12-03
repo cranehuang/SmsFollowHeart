@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/leftTextView"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:text="至"
+            android:textSize="40dp"
+            android:layout_weight="6" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" 
+            android:orientation="horizontal"
+            >
+
+            <EditText 
+                android:id="@+id/numEditText"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                 />
+
+            <Button
+                android:layout_weight="5"
+                android:id="@+id/testButton"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:text="联系人" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1" >
+        
+        <LinearLayout 
+            android:layout_weight="6"
+            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            >
+            
+        </LinearLayout>
+        <LinearLayout 
+            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            >
+            <EditText 
+                android:id="@+id/messageEditText"
+                android:layout_height="fill_parent"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                />
+            <LinearLayout 
+                android:layout_height="fill_parent"
+                android:layout_width="match_parent"
+                android:layout_weight="5"
+                >
+			<Button 
+			    android:id="@+id/sendButton"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="bottom"
+			    />	                
+            </LinearLayout>
+            
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

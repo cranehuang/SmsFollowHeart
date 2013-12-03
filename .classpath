@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry exported="true" kind="lib" path="D:/Android开发/pinyin4j-2.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Administrator/Desktop/种子杯相关/友盟APP/libs/umeng_sdk.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

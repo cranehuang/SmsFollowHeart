@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/whole_bg"
+    >
+<!-- <TextView  
+	android:id="@+id/detailsNumber"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    />
+<TextView  
+	android:id="@+id/detailsBody"
+    android:layout_width="fill_parent" 
+    android:layout_height="200dip" 
+    /> -->
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="3dp"
+    android:id="@+id/layout_cr"
+    >
+    <Button 
+        android:id="@+id/send_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/send_btn_selector"/>
+   
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px"
+    />
+    <EditText 
+        android:id="@+id/eidt_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/text_color_deep"
+        android:layout_toLeftOf="@id/send_reply"
+        android:hint="@string/input_content"
+        />
+    
+</RelativeLayout>
+
+<RelativeLayout 
+    android:layout_alignParentTop="true"
+    android:layout_above="@id/layout_cr"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+     
+    <ListView 
+    android:id = "@+id/conlists"
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:layout_alignParentLeft="true"
+    android:stackFromBottom="true"/>
+</RelativeLayout>
+
+
+</RelativeLayout>

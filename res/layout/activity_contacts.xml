@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/whole_bg" >
+ 
+    <RelativeLayout 
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/contacts_top_bg">
+       <!--  <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/contactsText"
+            /> -->
+        <TextView 
+            android:id="@+id/tv_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="15sp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/text_color_deep"
+            android:layout_centerVertical="true"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选中数目："
+            android:textSize="15sp"
+            android:textColor="@color/text_color_deep"
+            android:layout_toLeftOf="@id/tv_sum"
+            android:layout_centerVertical="true"
+           />
+    </RelativeLayout>
+
+   	 <LinearLayout 
+   	     android:id="@+id/layout_bottom"
+   	     android:layout_width="fill_parent"
+   	     android:layout_height="wrap_content"
+   	     android:layout_alignParentBottom="true"
+   	     android:weightSum="1.0"
+   	     android:orientation="horizontal">
+        <Button 
+            android:id="@+id/cancle_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_deep"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="取消"/>
+        <Button 
+            android:id="@+id/confirm_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:textColor="@color/text_color_deep"
+            android:text="完成"/>   	     
+   	 </LinearLayout>    
+        <RelativeLayout
+            android:id="@+id/layout_search"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_white"
+            android:focusableInTouchMode="true"
+            android:layout_below="@id/layout_title">
+            
+              <EditText
+                android:id="@+id/search_query"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@android:drawable/ic_search_category_default"
+                android:hint="@string/search_hint" 
+                android:textColor="@color/text_color_deep"
+                android:maxLines="1"
+                android:background="@drawable/search_contact_edit_bg"
+                android:singleLine="true"
+                />
+            
+        </RelativeLayout>
+    
+  <!-- android:background="@android:color/transparent" -->
+    <FrameLayout
+        android:id="@+id/listView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_search"
+        android:layout_above="@id/layout_bottom"
+        >
+          <TextView
+            android:id="@+id/pb_nocontacts_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="28dip"
+            android:text="暂无匹配联系人"
+            android:textColor="@color/text_color_deep"
+            android:visibility="gone"/> 
+        <FrameLayout
+             android:layout_width="fill_parent"
+        	 android:layout_height="fill_parent"
+            >
+          
+        <followheart.adapters.SectionListView
+            android:id="@+id/section_list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:dividerHeight="3dp" >
+        </followheart.adapters.SectionListView>
+		
+		</FrameLayout>
+        
+        <LinearLayout
+            android:id="@+id/list_index"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right"
+            android:layout_margin="10dp"       
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" />
+    </FrameLayout>
+
+</RelativeLayout>

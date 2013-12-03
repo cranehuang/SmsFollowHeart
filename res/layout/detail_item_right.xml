@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="50dp"
+     >
+   <!--  <ImageView 
+        android:id="@+id/contactphotoright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"/> -->
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        >
+        <ImageView 
+	        android:id="@+id/warning"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_marginRight="2dp"/>
+        <RelativeLayout 
+	        android:id="@+id/smsbody_prompt"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@id/warning"
+	        android:layout_marginTop="8dp"
+	        android:layout_marginBottom="8dp"
+	        android:layout_marginRight="2dp"
+	        android:background="@drawable/chatto_bg_selector">
+	        <RelativeLayout 
+	            android:id="@+id/date_and_progressBar"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+		        android:layout_alignParentTop="true"
+		        >
+	            <TextView 
+		            android:id="@+id/dateright"
+		            android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:layout_centerVertical="true"
+			        android:textColor="@color/text_color_light"
+			        android:textSize="10sp"/>
+		        <ProgressBar
+				    android:id="@+id/send_sms_progressbar"
+				    android:layout_toRightOf="@id/dateright"
+				    android:layout_marginLeft="2dp"
+				    style="@android:style/Widget.ProgressBar.Small.Inverse"
+					android:layout_height="wrap_content" 
+					android:layout_width="wrap_content"
+					android:layout_centerVertical="true"
+					android:visibility="gone"/>
+	        </RelativeLayout>
+	        
+	        
+	       <!--  android:indeterminateDrawable="@drawable/send_sms_progressbar" -->
+	        
+	        <TextView 
+		        android:id="@+id/bodyright"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/text_color_deep"
+		        android:gravity="center_vertical"
+		        android:layout_below="@id/date_and_progressBar"
+		        android:layout_alignLeft="@id/dateright"
+		        />
+		<!--     <TextView
+		        android:id="@+id/send_prompt"
+		        android:layout_height="wrap_content"
+		        android:layout_width="wrap_content"
+		        android:textSize="12sp"
+		        android:layout_below="@id/bodyright"
+		        android:layout_marginTop="1dp"
+		        android:textColor="@color/text_color_light"
+		        android:layout_alignLeft="@id/bodyright"
+		        android:visibility="gone"/> -->
+	    </RelativeLayout>
+	    
+    </RelativeLayout>
+    
+</RelativeLayout>
